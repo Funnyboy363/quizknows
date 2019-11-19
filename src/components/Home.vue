@@ -1,4 +1,5 @@
 <template>
+<div>
   <v-card>
     <v-navigation-drawer class="navDrawer" expand-on-hover permanent clipped floating app>
       <template v-slot:prepend>
@@ -22,36 +23,35 @@
           </v-list-item>
         </v-list>
       </template>
-
+  
       <v-divider></v-divider>
-
       <v-list nav>
-        <v-list-item link>
+        <v-list-item link to="/dashboard">
           <v-list-item-icon>
             <v-icon>mdi-view-dashboard</v-icon>
             <v-icon></v-icon>
           </v-list-item-icon>
           <v-list-item-title>Dashboard</v-list-item-title>
         </v-list-item>
-        <v-list-item link>
+        <v-list-item link to="/grades">
           <v-list-item-icon>
             <v-icon>mdi-percent</v-icon>
           </v-list-item-icon>
           <v-list-item-title>Grades</v-list-item-title>
         </v-list-item>
-        <v-list-item link>
+        <v-list-item link to="/tests">
           <v-list-item-icon>
             <v-icon>mdi-file-document-edit</v-icon>
           </v-list-item-icon>
           <v-list-item-title>Tests</v-list-item-title>
         </v-list-item>
-        <v-list-item link>
+        <v-list-item link to="/quizzes">
           <v-list-item-icon>
             <v-icon>mdi-brain</v-icon>
           </v-list-item-icon>
           <v-list-item-title>Quizzes</v-list-item-title>
         </v-list-item>
-        <v-list-item link>
+        <v-list-item link to="/settings">
           <v-list-item-icon>
             <v-icon>mdi-settings</v-icon>
           </v-list-item-icon>
@@ -60,8 +60,9 @@
       </v-list>
     </v-navigation-drawer>
   </v-card>
+   <router-view></router-view>
+   </div>
 </template>
-
 <script>
 // import Logger from './Logger'
 export default {
